@@ -52,7 +52,8 @@ function printQues() {
 }
 
 function endTest() {
-    document.getElementById("total").innerHTML="Total result is "+ marks;
+    alert("Are you sure Want TO End the Test");
+    document.getElementById("total").innerHTML="Thank You! Total Score is "+ marks;
     disabled();
 }
 
@@ -101,11 +102,11 @@ function prevQ() {
 }
 
 function timer() {
-    var min = 0;
-    var sec = 20;
+    var min = 30;
+    var sec = 60;
     var x =setInterval(function(){
     var a = new Date();
-        document.getElementById("timer").innerHTML = min +" : " + sec ;
+        document.getElementById("timer").innerHTML = min + ":Minutes"+" : " + sec+":Secounds";
         sec--;
         if(sec == 00)
         {
@@ -123,7 +124,5 @@ function timer() {
             min--;
             sec = 60;
         }
-        },2000);
-    
-    
+        },1000);
 }
